@@ -86,8 +86,6 @@ The feedback principle it was meant to serve does not.
 
 ### Affordances and ghost buttons
 
-Affordances and ghost buttons
-
 Norman’s concept of affordance — the idea that design should visually communicate what actions are possible — has been systematically dismantled by the aesthetic preference for minimalism. Ghost buttons (outlines only, no fill), flat design with no depth cues, icon-only navigation bars with no labels, and links without underlines: all of these strip away the visual signals that tell a user “this is tappable, this is here for a reason.” 
 
 The affordance has been designed out of them.
