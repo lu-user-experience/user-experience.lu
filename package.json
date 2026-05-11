@@ -1,0 +1,33 @@
+{
+  "name": "user-experience.lu",
+  "version": "1.0.0",
+  "description": "ux website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:11ty": "eleventy --serve",
+    "dev:css": "tailwindcss -i ./src/assets/css/global.css -o ./dist/assets/css/global.css --watch",
+    "build": "npm run build:css && eleventy",
+    "build:css": "tailwindcss -i ./src/assets/css/global.css -o ./dist/assets/css/global.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lu-user-experience/user-experience.lu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lu-user-experience/user-experience.lu/issues"
+  },
+  "homepage": "https://github.com/lu-user-experience/user-experience.lu#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "autoprefixer": "^10.5.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^4.3.0"
+  }
+}
