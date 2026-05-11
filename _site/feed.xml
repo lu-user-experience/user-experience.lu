@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en" xml:base="http://localhost:8080/">
+  <title>Interfaces After Troy</title>
+  <subtitle>A blog about what remains after digital systems break their original promise of being human-centered.</subtitle>
+  <link href="http://localhost:8080/feed.xml" rel="self" />
+  <link href="http://localhost:8080/" />
+  <updated>2026-05-11T14:27:40Z</updated>
+  <id>http://localhost:8080/</id>
+  <author>
+    <name>Len Dierckx</name>
+  </author>
+	<entry>
+      <title>Everybody Rides a Bike. Nobody Knows How.</title>
+      <link href="http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/" />
+      <updated>2026-05-11T00:00:00Z</updated>
+      <id>http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/</id>
+      <content type="html">
+				&lt;p&gt;Think about the moment you learned to ride a bicycle. Someone probably held the back of the saddle. You wobbled. You fell. You got back on. And then — somewhere between the fear and the forward motion — something clicked. The bike stopped being an object you were fighting and became an extension of your body.&lt;/p&gt;
+&lt;p&gt;Now ask yourself: can you explain exactly how you balance on a bicycle?&lt;/p&gt;
+&lt;p&gt;Most people cannot. The knowledge is real — you can prove it every morning on your commute — but it is no longer accessible as knowledge. You’ve since forgotten the bruises, the fear, and the countless attempts.&lt;/p&gt;
+&lt;p&gt;Now, it’s just something you do, without a second thought. Something similar happened to the design world and Don Norman.&lt;/p&gt;
+&lt;h2 id=&quot;the-man-who-named-the-invisible&quot;&gt;&lt;a href=&quot;http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/#the-man-who-named-the-invisible&quot; class=&quot;heading-anchor&quot;&gt;The Man Who Named the Invisible&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In 1988, Donald Norman published &lt;em&gt;The Design of Everyday Things&lt;/em&gt;. The book was a provocation disguised as a user manual. Norman argued that when people struggle with objects — a door that won’t open, a stove dial that controls the wrong burner, a light switch that does nothing predictable — the fault is not with the people. It is with the design.&lt;/p&gt;
+&lt;p&gt;This was a radical idea at the time. Norman gave designers a new vocabulary: &lt;strong&gt;affordances&lt;/strong&gt; (what an object communicates it can do), &lt;strong&gt;signifiers&lt;/strong&gt; (signals that tell users where to act), &lt;strong&gt;feedback&lt;/strong&gt; (responses that confirm an action worked), &lt;strong&gt;constraints&lt;/strong&gt; (built-in limits that prevent wrong actions), &lt;strong&gt;mappings&lt;/strong&gt; (logical relationships between controls and their effects), and perhaps most importantly for digital design, concepts like &lt;strong&gt;learnability&lt;/strong&gt; — how quickly a new user can accomplish basic tasks — and &lt;strong&gt;memorability&lt;/strong&gt; — whether a casual user can return to a product after a gap and still know what to do.&lt;/p&gt;
+&lt;p&gt;These weren’t aesthetic preferences. They were cognitive principles rooted in how human perception and memory actually work. And they changed everything.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The problem with truly good ideas is that they dissolve. They stop being ideas and start being air — everywhere, invisible, no longer attributed to anyone.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;when-an-idea-becomes-infrastructure&quot;&gt;&lt;a href=&quot;http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/#when-an-idea-becomes-infrastructure&quot; class=&quot;heading-anchor&quot;&gt;When an Idea Becomes Infrastructure&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Over the following decade, Norman’s concepts spread through design education, product teams, and software companies. They were taught in HCI programs. They were cited in usability research. They were written into style guides.&lt;/p&gt;
+&lt;p&gt;And then something strange happened: the citations disappeared. The source was forgotten. The vocabulary remained, but the reasoning behind it did not.&lt;/p&gt;
+&lt;p&gt;Norman himself revised the book in 2013, renaming “affordances” to “signifiers” to correct widespread misapplication — a sign that even his most cited concept had been distorted in transmission.&lt;/p&gt;
+&lt;p&gt;Today, if you walk into most product design teams and ask why the app has an onboarding flow, someone will say: “Because users need to learn how to use it.” That is the Norman answer. But if you ask them what specifically &lt;em&gt;makes&lt;/em&gt; it learnable — what the cognitive theory behind that decision is, what they are actually calibrating for — the room goes quiet. The onboarding exists. The reason it exists has been forgotten.&lt;/p&gt;
+&lt;p&gt;This is what institutionalisation looks like. Not rejection. Not critique. Absorption without attribution. The idea becomes a practice. The practice becomes a default. The default becomes invisible. Nobody is wrong, exactly — they’re applying the principle. But they’re applying it on autopilot, without access to the underlying logic.&lt;/p&gt;
+&lt;h3 id=&quot;01-/-learnability&quot;&gt;&lt;a href=&quot;http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/#01-/-learnability&quot; class=&quot;heading-anchor&quot;&gt;01 / Learnability&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id=&quot;what-it-actually-means&quot;&gt;&lt;a href=&quot;http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/#what-it-actually-means&quot; class=&quot;heading-anchor&quot;&gt;What it actually means&lt;/a&gt;&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A first-time user should be able to accomplish core tasks — not because they read documentation, but because the interface communicates its own logic.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;Just like riding a bike, you can learn it, with bruises or without.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&quot;02-/-memorability&quot;&gt;&lt;a href=&quot;http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/#02-/-memorability&quot; class=&quot;heading-anchor&quot;&gt;02 / Memorability&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id=&quot;what-it-actually-means-1&quot;&gt;&lt;a href=&quot;http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/#what-it-actually-means-1&quot; class=&quot;heading-anchor&quot;&gt;What it actually means&lt;/a&gt;&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A returning user, after an absence, should be able to re-establish competence without relearning from scratch. The design carries memory for them.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;As with the bike, once you know how to ride, you remember, even after years.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&quot;03-/-affordance&quot;&gt;&lt;a href=&quot;http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/#03-/-affordance&quot; class=&quot;heading-anchor&quot;&gt;03 / Affordance&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id=&quot;what-it-actually-means-2&quot;&gt;&lt;a href=&quot;http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/#what-it-actually-means-2&quot; class=&quot;heading-anchor&quot;&gt;What it actually means&lt;/a&gt;&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;An object or interface element should communicate — through its form alone — what actions are possible with it. A button that looks tappable &lt;em&gt;is&lt;/em&gt; the signal.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;Two handles, two pedals and a saddle: each part invites its own action.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;These are not checklists. They are lenses — ways of diagnosing design failures and making informed decisions. But stripped from their theoretical roots, they become, at best, cargo cult rituals.&lt;/p&gt;
+&lt;h2 id=&quot;the-implementations-we-keptthe-ideas-we-lost&quot;&gt;&lt;a href=&quot;http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/#the-implementations-we-keptthe-ideas-we-lost&quot; class=&quot;heading-anchor&quot;&gt;The Implementations We Kept,&lt;br&gt;
+the Ideas We Lost&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Walk through the outputs of modern UX practice and you find Norman’s fingerprints everywhere — but rarely his reasoning.&lt;/p&gt;
+&lt;h3 id=&quot;onboarding-flows&quot;&gt;&lt;a href=&quot;http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/#onboarding-flows&quot; class=&quot;heading-anchor&quot;&gt;Onboarding flows&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Onboarding is a Norman solution. It exists because learnability is not free — a new user needs their first encounter with a product to be scaffolded. But in the hands of modern growth-driven product teams, onboarding has been colonised by conversion metrics. Modal tooltips. Animated walkthroughs. Progress bars that say “You’re 60% set up!” The question is no longer “does this help the user build a correct mental model?” The question is “does this increase activation rate?”&lt;/p&gt;
+&lt;p&gt;The implementation survived. The intention was quietly replaced.&lt;/p&gt;
+&lt;h3 id=&quot;error-messages&quot;&gt;&lt;a href=&quot;http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/#error-messages&quot; class=&quot;heading-anchor&quot;&gt;Error messages&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Norman was emphatic about feedback — when something goes wrong, the system must tell the user what happened, why, and what to do next. Today, error handling is a UX discipline of its own. But the dominant practice is to soften error messages into emotional reassurance. “Oops! Something went wrong.” “Hmm, we couldn’t find that.” The user feels held, briefly, then is left with no actual information. The message exists.&lt;/p&gt;
+&lt;p&gt;The feedback principle it was meant to serve does not.&lt;/p&gt;
+&lt;h3 id=&quot;affordances-and-ghost-buttons&quot;&gt;&lt;a href=&quot;http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/#affordances-and-ghost-buttons&quot; class=&quot;heading-anchor&quot;&gt;Affordances and ghost buttons&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Affordances and ghost buttons&lt;/p&gt;
+&lt;p&gt;Norman’s concept of affordance — the idea that design should visually communicate what actions are possible — has been systematically dismantled by the aesthetic preference for minimalism. Ghost buttons (outlines only, no fill), flat design with no depth cues, icon-only navigation bars with no labels, and links without underlines: all of these strip away the visual signals that tell a user “this is tappable, this is here for a reason.”&lt;/p&gt;
+&lt;p&gt;The affordance has been designed out of them.&lt;/p&gt;
+&lt;h3 id=&quot;memorability-and-dark-patterns&quot;&gt;&lt;a href=&quot;http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/#memorability-and-dark-patterns&quot; class=&quot;heading-anchor&quot;&gt;Memorability and dark patterns&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Memorability assumes a user who returns with goodwill. But modern apps are frequently redesigned not to remain memorable, but to re-engage. The subscription cancellation flow that is buried four layers deep. The cookie consent screen engineered to maximise accidental acceptance. The settings menu that moves with every update.&lt;/p&gt;
+&lt;p&gt;These are Norman’s principles, inverted — applied not to support the user’s memory, but to exploit its limits.&lt;/p&gt;
+&lt;h4 id=&quot;note-on-the-bicycle&quot;&gt;&lt;a href=&quot;http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/#note-on-the-bicycle&quot; class=&quot;heading-anchor&quot;&gt;Note on the bicycle&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;The bicycle analogy is precise in one uncomfortable way: when knowledge becomes embodied, we lose access to it under pressure. An experienced cyclist who falls will instinctively grab the handlebars and lean — correctly — without thinking. A designer who has absorbed Norman’s vocabulary without its reasoning will, under deadline pressure, reach for the familiar pattern: add an onboarding tooltip, write a friendlier error message, simplify the visual design. The pattern fires. The reasoning doesn’t.&lt;/p&gt;
+&lt;p&gt;The difference matters when the pattern doesn’t fit. When a novel interface doesn’t fit the template. When the error isn’t a simple failure but a complex state. When the user isn’t a novice encountering the product for the first time, but an expert who needs efficiency. Embodied knowledge fails in edge cases. Principled knowledge adapts.&lt;/p&gt;
+&lt;h2 id=&quot;how-modern-ux-forgot-what-it-was-doing&quot;&gt;&lt;a href=&quot;http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/#how-modern-ux-forgot-what-it-was-doing&quot; class=&quot;heading-anchor&quot;&gt;How Modern UX Forgot What It Was Doing&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;There is a structural reason this happened, beyond ordinary forgetting. The professionalisation of UX coincided with the industrialisation of software product development. Design became a function. Functions are measured. Measurement demands proxies. And the proxies gradually became the goals.&lt;/p&gt;
+&lt;p&gt;Learnability became “time-to-activation.” Memorability became “day-7 retention.” Affordance became “click-through rate on primary CTA.” These are not illegitimate measurements — but they are downstream effects, not root causes. Optimising for them without understanding the underlying principle is like training for a race by measuring your heart rate rather than your running mechanics. You’ll optimise something. It might not be the right thing.&lt;/p&gt;
+&lt;p&gt;Meanwhile, design education shifted. Portfolio culture took over. The question students are trained to answer is not “what principle guided this decision?” but “what problem did this feature solve and how did you measure it?” The reasoning is subordinated to the narrative. The principle is never surfaced.&lt;/p&gt;
+&lt;p&gt;Norman’s vocabulary is now part of the standard design lexicon — “we need better &lt;s&gt;affordances&lt;/s&gt;/signifiers here,” “the learnability curve is too steep” — but the vocabulary is used decoratively, not analytically. Words that once carried precise cognitive meaning have softened into vibes.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When everyone uses the word and no one can define it, the word is no longer doing cognitive work. It’s doing social work — signalling membership in a group, not conveying an idea.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;why-this-matters-now&quot;&gt;&lt;a href=&quot;http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/#why-this-matters-now&quot; class=&quot;heading-anchor&quot;&gt;Why This Matters Now&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The stakes of forgotten reasoning have never been higher. The products being designed today are not door handles and light switches. They are medical interfaces, financial tools, social systems, AI interactions. The cost of a design that fails learnability isn’t frustration with a teapot. It’s a patient who misunderstands a dosage interface. A user who can’t understand why an AI system behaved as it did. A voter who cannot confidently navigate a ballot.&lt;/p&gt;
+&lt;p&gt;And the new design challenges we face — voice interfaces, AI assistants, augmented reality overlays — don’t have established pattern libraries to borrow from. The templates don’t exist yet. This is precisely the territory where you cannot ride on muscle memory. You need the principle, not the implementation.&lt;/p&gt;
+&lt;p&gt;How do you signal affordance in a voice interface, where there is no visual form? How do you build learnability into an AI assistant whose responses are inherently unpredictable? How do you support memorability in an AR overlay that vanishes when you blink? These questions cannot be answered by reaching for an onboarding modal or a friendlier error message. They require the underlying reasoning — Norman’s original questions — reapplied from scratch.&lt;/p&gt;
+&lt;h2 id=&quot;reclaiming-the-source&quot;&gt;&lt;a href=&quot;http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/#reclaiming-the-source&quot; class=&quot;heading-anchor&quot;&gt;Reclaiming the Source&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;There is a practice in certain martial arts traditions of deliberately slowing down a mastered movement — returning to beginner form not because the master has forgotten, but because re-accessing the reasoning behind the movement sharpens what muscle memory smooths over. The principle is recovered by practising at the level of intentionality.&lt;/p&gt;
+&lt;p&gt;Something similar is available to designers. Not a rejection of pattern libraries and component systems — these are useful, and Don Norman himself would say so — but a discipline of tracing each pattern back to its principle. When you add an onboarding flow: why, specifically? What mental model are you building? How will you know if it worked? When you write an error message: what information does the user actually need, and what do you gain by softening it into warmth?&lt;/p&gt;
+&lt;p&gt;The question is not “what does our design system say?” but “what does a user’s cognition require?” That is the Norman question. It was always the Norman question. It just got absorbed into the furniture.&lt;/p&gt;
+&lt;p&gt;You probably learned to ride a bicycle between the ages of four and eight. You have not forgotten how. But ask yourself: do you know &lt;em&gt;why&lt;/em&gt; you lean into a turn instead of away from it? Could you teach the physics to someone who’d never tried? Could you apply those same principles to riding a unicycle, or navigating a cargo bike, or steering in icy conditions?&lt;/p&gt;
+&lt;p&gt;That is what principles are for. Not the common case.&lt;/p&gt;
+&lt;p&gt;But the unfamiliar one.&lt;/p&gt;
+
+ 			</content>
+    </entry></feed>

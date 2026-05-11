@@ -2,7 +2,6 @@
 node_modules
 
 # generated files
-_site
 src/_includes/css
 src/_includes/scripts
 

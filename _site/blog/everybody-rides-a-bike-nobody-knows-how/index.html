@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en"><!-- The order of elements in the head follows recommendations by Harry Roberts. learn more here: https://www.youtube.com/watch?v=MHyAOZ45vnU -->
+<head>
+    <!-- 1 charset/viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 2 title -->
+    <title>Everybody Rides a Bike. Nobody Knows How.</title>
+
+    <base href="/blog/everybody-rides-a-bike-nobody-knows-how/">
+
+    <!-- 3 synchronous js  -->
+    
+<script><!-- inlined for all pages -->
+(()=>{var p=Object.defineProperty;var u=(c,t,e)=>t in c?p(c,t,{enumerable:!0,configurable:!0,writable:!0,value:e}):c[t]=e;var s=(c,t,e)=>u(c,typeof t!="symbol"?t+"":t,e);var r=class r extends HTMLElement{constructor(){super(),this.ready=new Promise(t=>{this.readyResolve=t})}static getParents(t,e=!1){let a=[];for(;t;){if(t.matches&&t.matches(r.tagName)){if(e&&t===e)break;d.hasConditions(t)&&a.push(t)}t=t.parentNode}return a}static async ready(t,e){if(e||(e=r.getParents(t)),e.length===0)return;let a=await Promise.all(e.map(i=>i.wait()));if(a.length)return a[0]}forceFallback(){window.Island&&Object.assign(r.fallback,window.Island.fallback);for(let t in r.fallback){let e=Array.from(this.querySelectorAll(t)).reverse();for(let a of e){if(!a.isConnected)continue;let i=r.getParents(a);if(i.length===1){let o=r.ready(a,i);r.fallback[t](o,a,r.prefix)}}}}wait(){return this.ready}async connectedCallback(){d.hasConditions(this)&&this.forceFallback(),await this.hydrate()}getTemplates(){return this.querySelectorAll(`template[${r.attr.template}]`)}replaceTemplates(t){for(let e of t){if(r.getParents(e,this).length>0)continue;let a=e.getAttribute(r.attr.template);if(a==="replace"){let i=Array.from(this.childNodes);for(let o of i)this.removeChild(o);this.appendChild(e.content);break}else{let i=e.innerHTML;if(a==="once"&&i){if(r.onceCache.has(i)){e.remove();return}r.onceCache.set(i,!0)}e.replaceWith(e.content)}}}async hydrate(){let t=[];this.parentNode&&t.push(r.ready(this.parentNode));let e=d.getConditions(this);for(let a in e)d.map[a]&&t.push(d.map[a](e[a],this));await Promise.all(t),this.replaceTemplates(this.getTemplates());for(let a of r.onReady.values())await a.call(this,r);this.readyResolve(),this.setAttribute(r.attr.ready,""),this.querySelectorAll(`[${r.attr.defer}]`).forEach(a=>a.removeAttribute(r.attr.defer))}};s(r,"tagName","is-land"),s(r,"prefix","is-land--"),s(r,"attr",{template:"data-island",ready:"ready",defer:"defer-hydration"}),s(r,"onceCache",new Map),s(r,"onReady",new Map),s(r,"fallback",{":not(is-land,:defined,[defer-hydration])":(t,e,a)=>{let i=document.createElement(a+e.localName);for(let n of e.getAttributeNames())i.setAttribute(n,e.getAttribute(n));let o=e.shadowRoot;if(!o){let n=e.querySelector(":scope > template:is([shadowrootmode], [shadowroot])");if(n){let m=n.getAttribute("shadowrootmode")||n.getAttribute("shadowroot")||"closed";o=e.attachShadow({mode:m}),o.appendChild(n.content.cloneNode(!0))}}return o&&i.attachShadow({mode:o.mode}).append(...o.childNodes),i.append(...e.childNodes),e.replaceWith(i),t.then(()=>{i.shadowRoot&&e.shadowRoot.append(...i.shadowRoot.childNodes),e.append(...i.childNodes),i.replaceWith(e)})}});var f=r,l=class l{static hasConditions(t){return Object.keys(l.getConditions(t)).length>0}static getConditions(t){let e={};for(let a of Object.keys(l.map))t.hasAttribute(`on:${a}`)&&(e[a]=t.getAttribute(`on:${a}`));return e}static visible(t,e){if("IntersectionObserver"in window)return new Promise(a=>{let i=new IntersectionObserver(o=>{let[n]=o;n.isIntersecting&&(i.unobserve(n.target),a())});i.observe(e)})}static idle(){let t=new Promise(e=>{document.readyState!=="complete"?window.addEventListener("load",()=>e(),{once:!0}):e()});return"requestIdleCallback"in window?Promise.all([new Promise(e=>{requestIdleCallback(()=>{e()})}),t]):t}static interaction(t,e){let a=["click","touchstart"];return t&&(a=(t||"").split(",").map(i=>i.trim())),new Promise(i=>{function o(n){i();for(let m of a)e.removeEventListener(m,o)}for(let n of a)e.addEventListener(n,o,{once:!0})})}static media(t){let e={matches:!0};if(t&&"matchMedia"in window&&(e=window.matchMedia(t)),!e.matches)return new Promise(a=>{e.addListener(i=>{i.matches&&a()})})}static saveData(t){if(!(!("connection"in navigator)||navigator.connection.saveData===(t!=="false")))return new Promise(()=>{})}};s(l,"map",{visible:l.visible,idle:l.idle,interaction:l.interaction,media:l.media,"save-data":l.saveData});var d=l;"customElements"in window&&(window.customElements.define(f.tagName,f),window.Island=f);var y=f.ready;var h=class{};s(h,"attr",{autoInitType:"autoinit",import:"import"}),s(h,"types",{"petite-vue":function(t){t.createApp().mount(this)},vue:function(t){t.createApp().mount(this)},svelte:function(t){new t.default({target:this})},"svelte-ssr":function(t){new t.default({target:this,hydrate:!0})},preact:function(t){t.default(this)}});Island.onReady.set("import-autoinit",async function(c){let t,e=this.getAttribute(h.attr.import);if(e&&(t=await import(e)),t){let a=h.types[this.getAttribute(h.attr.autoInitType)||e];a&&await a.call(this,t)}});})();
+
+(()=>{var a="theme-preference",l={dark:"#F6F7D7",light:"#2e2e2e"},t={value:d()};window.onload=()=>{let e=document.querySelector("#light-theme-toggle"),r=document.querySelector("#dark-theme-toggle");document.querySelector("[data-theme-switcher]")&&(c(),o(),e.addEventListener("click",()=>n("light")),r.addEventListener("click",()=>n("dark")),e.setAttribute("aria-pressed",t.value==="light"),r.setAttribute("aria-pressed",t.value==="dark"))};window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",({matches:e})=>{t.value=e?"dark":"light",i(),o()});function n(e){t.value=e,document.querySelector("#light-theme-toggle").setAttribute("aria-pressed",e==="light"),document.querySelector("#dark-theme-toggle").setAttribute("aria-pressed",e==="dark"),i(),o()}function d(){return localStorage.getItem(a)?localStorage.getItem(a):window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}function i(){localStorage.setItem(a,t.value),c(),o()}function c(){document.firstElementChild.setAttribute("data-theme",t.value)}function o(){let e=document.querySelector('meta[name="theme-color"]'),r=t.value==="dark"?l.dark:l.light;e.setAttribute("content",r)}c();})();</script>
+
+
+    <!-- 4 schema settings -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "http://localhost:8080#website",
+        "url": "http://localhost:8080",
+        "name": "Interfaces After Troy",
+        "description": "A blog about what remains after digital systems break their original promise of being human-centered.",
+        "inLanguage": "en_UK"
+      }
+    ]
+  }
+</script>
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage"
+    },
+    "isPartOf": {
+      "@id": "http://localhost:8080#website"
+    },
+    "@id": "",
+    "headline": "Everybody Rides a Bike. Nobody Knows How.",
+    "description": "Don Norman&#39;s ideas didn&#39;t just influence design — they became invisible. And that invisibility is exactly the problem.",
+    "image": "http://localhost:8080/assets/images/template/opengraph-default.jpg",
+    "inLanguage": "en_UK",
+    "publisher": {
+      "@type": "Person",
+      "name": "Len Dierckx",
+      "url": "http://localhost:8080"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Len Dierckx"
+    },
+    "datePublished": "2026-05-11T00:00:00.000Z"
+  }
+</script>
+
+
+
+    <!-- 5 CSS  -->
+    <!-- <link rel="stylesheet" href="/assets/css/global.css?559f-e20c-5379" /> -->
+    
+		<!-- External CSS for local dev (refresh without page reload) -->
+		<link rel="stylesheet" href="/bundle/nDOSvpNAls.css">
+		<link rel="stylesheet" href="/bundle/vw7ltkSln-.css">
+
+	
+
+
+    <!-- 6 preloads  -->
+    <link rel="preload" href="/assets/fonts/redhat/red-hat-display-v7-latin-900.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="preload" href="/assets/fonts/atkinson/atkinson-hyperlegible-regular.woff2" as="font" type="font/woff2" crossorigin>
+
+<!-- preloads in page data -->
+
+
+    <!-- 7 defer  -->
+    
+
+
+    <!-- 8 meta tags, icons, open graph etc.  -->
+    
+
+<meta name="description" content="Don Norman&amp;#39;s ideas didn&amp;#39;t just influence design — they became invisible. And that invisibility is exactly the problem.">
+<meta name="theme-color" content="#2e2e2e" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F6F7D7" media="(prefers-color-scheme: light)">
+<!-- Search Engines -->
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index,follow">
+<!-- Made with Eleventy! -->
+<meta name="generator" content="Eleventy v3.1.5">
+<!-- Disable automatic detection and formatting of possible phone numbers -->
+<meta name="format-detection" content="telephone=no">
+<!-- supports both dark and light color schemes, page author prefers light as default. -->
+<meta name="color-scheme" content="light dark">
+<!-- Helps prevent duplicate content issues -->
+<link rel="canonical" href="http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/">
+<!-- Links to information about the author(s) of the document -->
+<link rel="author" href="humans.txt">
+
+
+  <!-- rel=me profiles -->
+  
+    <link rel="me" href="https://astuanax.com">
+  
+
+
+
+
+<!-- Open Graph meta  -->
+<meta property="og:url" content="http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Everybody Rides a Bike. Nobody Knows How.">
+<meta property="og:image" content="http://localhost:8080/assets/og-images/everybody-rides-a-bike-nobody-knows-how-preview.jpeg">
+<meta property="og:image:alt" content="Everybody Rides a Bike. Nobody Knows How.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:description" content="Don Norman&amp;#39;s ideas didn&amp;#39;t just influence design — they became invisible. And that invisibility is exactly the problem.">
+<meta property="og:site_name" content="Interfaces After Troy">
+<meta property="og:locale" content="en_UK">
+<meta property="article:author" content="Len Dierckx">
+
+<!-- Twitter specific head data was removed in v2 -->
+
+<!-- RSS Autodiscovery. Loops over meta.blog.feedLinks -->
+
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed: Interfaces After Troy" href="/feed.xml">
+
+  <link rel="alternate" type="application/json" title="JSON Feed: Interfaces After Troy" href="/feed.json">
+
+
+<!-- Favicon: https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+  </head>
+
+  <body class="post">
+    
+    <header class="wrapper">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <div class="repel ontop gutter-s">
+    <a href="/" class="logo | cluster">
+      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="#dd4462" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433z" clip-rule="evenodd"></path></svg>
+
+      <span class="font-display">Interfaces After Troy</span>
+    </a>
+    <!-- toggle drawer and sub menu in _data/meta.js -->
+
+
+
+<nav id="mainnav" aria-label="Main" class="mainnav">
+  <ul role="list" data-no-flash class="cluster">
+    
+      
+        <li>
+          <a href="/blog/" aria-current="page" data-state="active">Blog</a>
+        </li>
+      
+    
+  </ul>
+</nav>
+
+
+
+
+
+  </div>
+</header>
+
+
+    <main id="main" class="flow">
+<div style="--region-space-top: var(--space-xl-2xl)" class="region">
+  <div class="wrapper flow prose">
+    <h1 class="gradient-text">Everybody Rides a Bike. Nobody Knows How.</h1>
+
+    
+
+    <p class="meta | cluster gutter-xs-s">
+      <!-- draft status -->
+      <!-- date -->
+       <time datetime="2026-05-11T00:00:00.000Z"> May 11, 2026 </time>
+
+      
+    </p>
+
+    <p>Think about the moment you learned to ride a bicycle. Someone probably held the back of the saddle. You wobbled. You fell. You got back on. And then — somewhere between the fear and the forward motion — something clicked. The bike stopped being an object you were fighting and became an extension of your body.</p>
+<p>Now ask yourself: can you explain exactly how you balance on a bicycle?</p>
+<p>Most people cannot. The knowledge is real — you can prove it every morning on your commute — but it is no longer accessible as knowledge. You’ve since forgotten the bruises, the fear, and the countless attempts.</p>
+<p>Now, it’s just something you do, without a second thought. Something similar happened to the design world and Don Norman.</p>
+<h2 id="the-man-who-named-the-invisible"><a href="#the-man-who-named-the-invisible" class="heading-anchor">The Man Who Named the Invisible</a></h2>
+<p>In 1988, Donald Norman published <em>The Design of Everyday Things</em>. The book was a provocation disguised as a user manual. Norman argued that when people struggle with objects — a door that won’t open, a stove dial that controls the wrong burner, a light switch that does nothing predictable — the fault is not with the people. It is with the design.</p>
+<p>This was a radical idea at the time. Norman gave designers a new vocabulary: <strong>affordances</strong> (what an object communicates it can do), <strong>signifiers</strong> (signals that tell users where to act), <strong>feedback</strong> (responses that confirm an action worked), <strong>constraints</strong> (built-in limits that prevent wrong actions), <strong>mappings</strong> (logical relationships between controls and their effects), and perhaps most importantly for digital design, concepts like <strong>learnability</strong> — how quickly a new user can accomplish basic tasks — and <strong>memorability</strong> — whether a casual user can return to a product after a gap and still know what to do.</p>
+<p>These weren’t aesthetic preferences. They were cognitive principles rooted in how human perception and memory actually work. And they changed everything.</p>
+<blockquote>
+<p>The problem with truly good ideas is that they dissolve. They stop being ideas and start being air — everywhere, invisible, no longer attributed to anyone.</p>
+</blockquote>
+<h2 id="when-an-idea-becomes-infrastructure"><a href="#when-an-idea-becomes-infrastructure" class="heading-anchor">When an Idea Becomes Infrastructure</a></h2>
+<p>Over the following decade, Norman’s concepts spread through design education, product teams, and software companies. They were taught in HCI programs. They were cited in usability research. They were written into style guides.</p>
+<p>And then something strange happened: the citations disappeared. The source was forgotten. The vocabulary remained, but the reasoning behind it did not.</p>
+<p>Norman himself revised the book in 2013, renaming “affordances” to “signifiers” to correct widespread misapplication — a sign that even his most cited concept had been distorted in transmission.</p>
+<p>Today, if you walk into most product design teams and ask why the app has an onboarding flow, someone will say: “Because users need to learn how to use it.” That is the Norman answer. But if you ask them what specifically <em>makes</em> it learnable — what the cognitive theory behind that decision is, what they are actually calibrating for — the room goes quiet. The onboarding exists. The reason it exists has been forgotten.</p>
+<p>This is what institutionalisation looks like. Not rejection. Not critique. Absorption without attribution. The idea becomes a practice. The practice becomes a default. The default becomes invisible. Nobody is wrong, exactly — they’re applying the principle. But they’re applying it on autopilot, without access to the underlying logic.</p>
+<h3 id="01-/-learnability"><a href="#01-/-learnability" class="heading-anchor">01 / Learnability</a></h3>
+<h4 id="what-it-actually-means"><a href="#what-it-actually-means" class="heading-anchor">What it actually means</a></h4>
+<blockquote>
+<p>A first-time user should be able to accomplish core tasks — not because they read documentation, but because the interface communicates its own logic.</p>
+</blockquote>
+<p><em>Just like riding a bike, you can learn it, with bruises or without.</em></p>
+<h3 id="02-/-memorability"><a href="#02-/-memorability" class="heading-anchor">02 / Memorability</a></h3>
+<h4 id="what-it-actually-means-1"><a href="#what-it-actually-means-1" class="heading-anchor">What it actually means</a></h4>
+<blockquote>
+<p>A returning user, after an absence, should be able to re-establish competence without relearning from scratch. The design carries memory for them.</p>
+</blockquote>
+<p><em>As with the bike, once you know how to ride, you remember, even after years.</em></p>
+<h3 id="03-/-affordance"><a href="#03-/-affordance" class="heading-anchor">03 / Affordance</a></h3>
+<h4 id="what-it-actually-means-2"><a href="#what-it-actually-means-2" class="heading-anchor">What it actually means</a></h4>
+<blockquote>
+<p>An object or interface element should communicate — through its form alone — what actions are possible with it. A button that looks tappable <em>is</em> the signal.</p>
+</blockquote>
+<p><em>Two handles, two pedals and a saddle: each part invites its own action.</em></p>
+<p>These are not checklists. They are lenses — ways of diagnosing design failures and making informed decisions. But stripped from their theoretical roots, they become, at best, cargo cult rituals.</p>
+<h2 id="the-implementations-we-keptthe-ideas-we-lost"><a href="#the-implementations-we-keptthe-ideas-we-lost" class="heading-anchor">The Implementations We Kept,<br>
+the Ideas We Lost</a></h2>
+<p>Walk through the outputs of modern UX practice and you find Norman’s fingerprints everywhere — but rarely his reasoning.</p>
+<h3 id="onboarding-flows"><a href="#onboarding-flows" class="heading-anchor">Onboarding flows</a></h3>
+<p>Onboarding is a Norman solution. It exists because learnability is not free — a new user needs their first encounter with a product to be scaffolded. But in the hands of modern growth-driven product teams, onboarding has been colonised by conversion metrics. Modal tooltips. Animated walkthroughs. Progress bars that say “You’re 60% set up!” The question is no longer “does this help the user build a correct mental model?” The question is “does this increase activation rate?”</p>
+<p>The implementation survived. The intention was quietly replaced.</p>
+<h3 id="error-messages"><a href="#error-messages" class="heading-anchor">Error messages</a></h3>
+<p>Norman was emphatic about feedback — when something goes wrong, the system must tell the user what happened, why, and what to do next. Today, error handling is a UX discipline of its own. But the dominant practice is to soften error messages into emotional reassurance. “Oops! Something went wrong.” “Hmm, we couldn’t find that.” The user feels held, briefly, then is left with no actual information. The message exists.</p>
+<p>The feedback principle it was meant to serve does not.</p>
+<h3 id="affordances-and-ghost-buttons"><a href="#affordances-and-ghost-buttons" class="heading-anchor">Affordances and ghost buttons</a></h3>
+<p>Affordances and ghost buttons</p>
+<p>Norman’s concept of affordance — the idea that design should visually communicate what actions are possible — has been systematically dismantled by the aesthetic preference for minimalism. Ghost buttons (outlines only, no fill), flat design with no depth cues, icon-only navigation bars with no labels, and links without underlines: all of these strip away the visual signals that tell a user “this is tappable, this is here for a reason.”</p>
+<p>The affordance has been designed out of them.</p>
+<h3 id="memorability-and-dark-patterns"><a href="#memorability-and-dark-patterns" class="heading-anchor">Memorability and dark patterns</a></h3>
+<p>Memorability assumes a user who returns with goodwill. But modern apps are frequently redesigned not to remain memorable, but to re-engage. The subscription cancellation flow that is buried four layers deep. The cookie consent screen engineered to maximise accidental acceptance. The settings menu that moves with every update.</p>
+<p>These are Norman’s principles, inverted — applied not to support the user’s memory, but to exploit its limits.</p>
+<h4 id="note-on-the-bicycle"><a href="#note-on-the-bicycle" class="heading-anchor">Note on the bicycle</a></h4>
+<p>The bicycle analogy is precise in one uncomfortable way: when knowledge becomes embodied, we lose access to it under pressure. An experienced cyclist who falls will instinctively grab the handlebars and lean — correctly — without thinking. A designer who has absorbed Norman’s vocabulary without its reasoning will, under deadline pressure, reach for the familiar pattern: add an onboarding tooltip, write a friendlier error message, simplify the visual design. The pattern fires. The reasoning doesn’t.</p>
+<p>The difference matters when the pattern doesn’t fit. When a novel interface doesn’t fit the template. When the error isn’t a simple failure but a complex state. When the user isn’t a novice encountering the product for the first time, but an expert who needs efficiency. Embodied knowledge fails in edge cases. Principled knowledge adapts.</p>
+<h2 id="how-modern-ux-forgot-what-it-was-doing"><a href="#how-modern-ux-forgot-what-it-was-doing" class="heading-anchor">How Modern UX Forgot What It Was Doing</a></h2>
+<p>There is a structural reason this happened, beyond ordinary forgetting. The professionalisation of UX coincided with the industrialisation of software product development. Design became a function. Functions are measured. Measurement demands proxies. And the proxies gradually became the goals.</p>
+<p>Learnability became “time-to-activation.” Memorability became “day-7 retention.” Affordance became “click-through rate on primary CTA.” These are not illegitimate measurements — but they are downstream effects, not root causes. Optimising for them without understanding the underlying principle is like training for a race by measuring your heart rate rather than your running mechanics. You’ll optimise something. It might not be the right thing.</p>
+<p>Meanwhile, design education shifted. Portfolio culture took over. The question students are trained to answer is not “what principle guided this decision?” but “what problem did this feature solve and how did you measure it?” The reasoning is subordinated to the narrative. The principle is never surfaced.</p>
+<p>Norman’s vocabulary is now part of the standard design lexicon — “we need better <s>affordances</s>/signifiers here,” “the learnability curve is too steep” — but the vocabulary is used decoratively, not analytically. Words that once carried precise cognitive meaning have softened into vibes.</p>
+<blockquote>
+<p>When everyone uses the word and no one can define it, the word is no longer doing cognitive work. It’s doing social work — signalling membership in a group, not conveying an idea.</p>
+</blockquote>
+<h2 id="why-this-matters-now"><a href="#why-this-matters-now" class="heading-anchor">Why This Matters Now</a></h2>
+<p>The stakes of forgotten reasoning have never been higher. The products being designed today are not door handles and light switches. They are medical interfaces, financial tools, social systems, AI interactions. The cost of a design that fails learnability isn’t frustration with a teapot. It’s a patient who misunderstands a dosage interface. A user who can’t understand why an AI system behaved as it did. A voter who cannot confidently navigate a ballot.</p>
+<p>And the new design challenges we face — voice interfaces, AI assistants, augmented reality overlays — don’t have established pattern libraries to borrow from. The templates don’t exist yet. This is precisely the territory where you cannot ride on muscle memory. You need the principle, not the implementation.</p>
+<p>How do you signal affordance in a voice interface, where there is no visual form? How do you build learnability into an AI assistant whose responses are inherently unpredictable? How do you support memorability in an AR overlay that vanishes when you blink? These questions cannot be answered by reaching for an onboarding modal or a friendlier error message. They require the underlying reasoning — Norman’s original questions — reapplied from scratch.</p>
+<h2 id="reclaiming-the-source"><a href="#reclaiming-the-source" class="heading-anchor">Reclaiming the Source</a></h2>
+<p>There is a practice in certain martial arts traditions of deliberately slowing down a mastered movement — returning to beginner form not because the master has forgotten, but because re-accessing the reasoning behind the movement sharpens what muscle memory smooths over. The principle is recovered by practising at the level of intentionality.</p>
+<p>Something similar is available to designers. Not a rejection of pattern libraries and component systems — these are useful, and Don Norman himself would say so — but a discipline of tracing each pattern back to its principle. When you add an onboarding flow: why, specifically? What mental model are you building? How will you know if it worked? When you write an error message: what information does the user actually need, and what do you gain by softening it into warmth?</p>
+<p>The question is not “what does our design system say?” but “what does a user’s cognition require?” That is the Norman question. It was always the Norman question. It just got absorbed into the furniture.</p>
+<p>You probably learned to ride a bicycle between the ages of four and eight. You have not forgotten how. But ask yourself: do you know <em>why</em> you lean into a turn instead of away from it? Could you teach the physics to someone who’d never tried? Could you apply those same principles to riding a unicycle, or navigating a cargo bike, or steering in icy conditions?</p>
+<p>That is what principles are for. Not the common case.</p>
+<p>But the unfamiliar one.</p>
+
+    
+
+  </div>
+
+  <!--  h-card infos: https://indieweb.org/authorship -->
+  <div hidden class="h-entry">
+    <a href="http://localhost:8080/blog/everybody-rides-a-bike-nobody-knows-how/" class="u-url">Everybody Rides a Bike. Nobody Knows How.</a>
+    <a rel="author" href="http://localhost:8080" class="p-name u-url">Len Dierckx</a>
+    <img src="http://localhost:8080/icon-512x512.png" alt="Len Dierckx" class="u-author h-card">
+  </div>
+</div></main>
+
+    <footer class="site-footer mt-l-xl p-s-m">
+  <div class="wrapper">
+    <div class="cluster gutter-xs">
+      <nav aria-label="Complementary" class="cluster text-step-0">
+        © 2026
+        <a href="/"><span class="font-display">Interfaces After Troy</span> <small>0.1</small>
+        </a>
+
+        
+          <a href="/imprint/">Imprint</a>
+        
+          <a href="/privacy/">Privacy</a>
+        
+      </nav>
+
+      <nav aria-label="Platforms" class="cluster">
+        <!-- gets the first item from the feed loop set in meta -->
+        <a href="/feed.xml" rel="alternate" type="application/atom+xml" data-icon class="button">
+          <span class="visually-hidden">Atom Feed</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
+        </a>
+
+        
+          
+            <!-- regular platforms -->
+            <a data-icon href="https://github.com/sitefig" rel="me" class="no-indicator button">
+              <span class="visually-hidden">Github</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+            </a>
+          
+        
+      </nav>
+    </div>
+
+    <is-land on:idle><div role="region" aria-labelledby="theme-switcher-label" data-theme-switcher style="--cluster-horizontal-alignment: center" class="theme-switch | cluster gutter-s mt-xs">
+    <h2 id="theme-switcher-label">Theme</h2>
+    <button id="light-theme-toggle" data-theme="light" data-ghost-button data-small-button class="button">
+      <span>light</span>
+    </button>
+    <button id="dark-theme-toggle" data-theme="dark" data-ghost-button data-small-button class="button">
+      <span>dark</span>
+    </button>
+  </div>
+</is-land>
+
+
+    <aside class="creator | cluster gutter-2xs text-step-min-1 mt-xl">
+      Made with <span class="visually-hidden">love</span> <span><svg width="1em" height="1em" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3C4.239 3 2 5.216 2 7.95c0 2.207.875 7.445 9.488 12.74a.99.99 0 0 0 1.024 0C21.125 15.395 22 10.157 22 7.95 22 5.216 19.761 3 17 3s-5 3-5 3-2.239-3-5-3"></path></svg></span> and
+      <a href="https://www.11ty.dev/" class="no-indicator">
+        <span class="visually-hidden">Eleventy</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 29 29" aria-hidden="true"><path fill="currentColor" d="M9.156 22.425q-.324 0-.324-.878V7.08q0-.419-.168-.394l-1.035.263q-.284.026-.284-.576V5.116q0-.523.31-.588l3.415-.89a.5.5 0 0 1 .116-.012q.284 0 .283.615V21.55q0 .878-.336.877zm8.846.027q-.518 0-.899-.073a2.4 2.4 0 0 1-.795-.328 2 2 0 0 1-.68-.7q-.265-.446-.432-1.245t-.168-1.899v-6.714q0-.263-.142-.263h-.802q-.324 0-.324-.627v-.708q0-.64.324-.641h.803q.14 0 .141-.353l.233-5.093q.039-.693.336-.693h1.295q.324 0 .324.693v5.093q-.001.354.156.353h1.65q.324 0 .324.641v.708q0 .627-.324.627h-1.655q-.09 0-.122.046-.032.045-.031.217v6.756q0 .759.096 1.264.097.504.283.739.188.235.375.313.188.08.459.078h.917q.349.001.348.484v.785q0 .537-.374.537zm4.964 1.57q.296 0 .516-.49.22-.493.221-1.396 0-.211-.26-1.454l-2.536-10.67a2 2 0 0 1-.026-.29q0-.47.195-.47h1.566q.18 0 .297.123.12.124.18.503l1.681 9.008q.051.157.065.158.052-.002.053-.144l1.319-8.983q.052-.392.16-.53a.34.34 0 0 1 .28-.138h1.085q.22 0 .22.51 0 .118-.026.302l-2.303 12.138q-.271 1.506-.595 2.305-.324.798-.726 1.086a1.85 1.85 0 0 1-1.061.302h-.13q-1.048 0-1.422-.564-.104-.118-.103-.603 0-.97.31-.97.026 0 .466.131.445.138.574.136M2.648 22.45q-.324.001-.324-.877V7.105q0-.42-.169-.394l-1.035.262Q.836 7 .837 6.397V5.14q0-.521.31-.588l3.417-.892a.5.5 0 0 1 .116-.012q.284 0 .283.615v17.309q0 .878-.336.877z"></path></svg>
+      </a>
+      by
+      <a href>Len Dierckx</a>
+    </aside>
+  </div>
+</footer>
+<script type="module" src="/assets/scripts/components/custom-easteregg.js"></script>
+      <custom-easteregg></custom-easteregg>
+
+</body>
+</html>

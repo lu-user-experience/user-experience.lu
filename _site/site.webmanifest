@@ -1,0 +1,26 @@
+{
+  "name": "Interfaces After Troy - A blog about what remains after digital systems break their original promise of being human-centered.",
+  "short_name": "Interfaces After Troy",
+  "start_url": "http://localhost:8080",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/maskable-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#FF165D",
+  "background_color": "#F6F7D7",
+  "display": "standalone"
+}
