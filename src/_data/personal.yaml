@@ -1,0 +1,7 @@
+# Personal details used for public facing pages (legal pages) and footer platform links.
+
+email: len@astuanax.com
+address: |-
+  Sitefig SARLS
+platforms:
+  github: 'https://github.com/sitefig'
