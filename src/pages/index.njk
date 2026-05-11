@@ -18,10 +18,7 @@ blog:
 
   <section class="full | region">
     <div class="prose wrapper flow">
-      <h2>{{ blog.title }}</h2>
-      {% if blog.intro %}
-        <p>{{ blog.intro }}</p>
-      {% endif %}
+
       <div class="feature |  region region-space-l">
         <custom-masonry layout="50-50">
           {% set itemList = collections.allPosts %}
