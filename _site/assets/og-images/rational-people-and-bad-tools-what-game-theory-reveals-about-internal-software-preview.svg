@@ -11,7 +11,7 @@
   
   
     
-  
+    
 
   <rect id="bg" width="100%" height="100%" opacity="1" fill="#FBBE25" />
   <!-- star -->
@@ -27,7 +27,7 @@
     fill="#161616"
     letter-spacing="-1"
   >
-    <tspan x="160" y="50">
+    <tspan x="160" y="90">
       13 / 07 / 2026
     </tspan>
   </text>
@@ -42,15 +42,13 @@
     letter-spacing="-3"
   >
     
-      <tspan x="160" y="150"> Nobody Is Being </tspan>
+      <tspan x="160" y="190"> Rational People and </tspan>
     
-      <tspan x="160" y="235"> Stupid: The Game </tspan>
+      <tspan x="160" y="275"> Bad Tools: What Game </tspan>
     
-      <tspan x="160" y="320"> Theory and why </tspan>
+      <tspan x="160" y="360"> Theory Reveals About </tspan>
     
-      <tspan x="160" y="405"> Internal Software </tspan>
-    
-      <tspan x="160" y="490"> usually sucks </tspan>
+      <tspan x="160" y="445"> Internal Software </tspan>
     
   </text>
 

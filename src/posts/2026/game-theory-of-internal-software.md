@@ -1,5 +1,5 @@
 ---
-title: "Nobody Is Being Stupid: The Game Theory and why Internal Software usually sucks"
+title: "Rational People and Bad Tools: What Game Theory Reveals About Internal Software"
 description: "Bad internal software isn't a design failure — it's a game theory problem. Why rational employees, managers, and developers produce tools nobody loves."
 date: 2026-07-13
 ---
