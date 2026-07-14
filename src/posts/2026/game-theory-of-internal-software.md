@@ -20,8 +20,6 @@ So when your expense tool feels like it was designed by nobody, that's because i
 
 ## The feedback commons
 
-Here's where it becomes a proper game.
-
 Good UX is not aesthetics; it's iteration. You build something, watch real people struggle with it, redesign, and repeat. Consumer products run this loop hundreds of times. The loop has one non-negotiable input: users willing to spend time being observed, interviewed, and inconvenienced by prototypes.
 
 Inside a company, that input is a **public good**. If the expense tool improves, everyone benefits — including the colleagues who never attended a single workshop. But the *cost* of improving it falls only on whoever shows up. And showing up is never in anyone's job description. The accountant is measured on closing the books, not on the quality of her bug reports.
